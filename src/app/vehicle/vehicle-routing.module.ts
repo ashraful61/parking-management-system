@@ -5,7 +5,8 @@ import { AddVehicleComponent } from './add-vehicle/add-vehicle.component';
 
 const routes: Routes = [
   { path: '', component: VehiclesComponent },
-  { path: 'add-vehicle', component: AddVehicleComponent }
+  { path: 'add-vehicle', component: AddVehicleComponent },
+  { path: 'add-vehicle/:id', component: AddVehicleComponent },
 ];
 
 @NgModule({

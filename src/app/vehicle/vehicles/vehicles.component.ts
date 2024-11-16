@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
 import { Vehicle } from '../../Interface/vehicle.model';
 import { DatePipe } from '@angular/common';
@@ -14,6 +14,9 @@ import { DatePipe } from '@angular/common';
 export class VehiclesComponent {
   vehicles: Vehicle[] = [];
 
+  constructor(private router: Router){
+
+  }
 
   ngOnInit() {
     this.loadSavedData();
@@ -32,9 +35,7 @@ export class VehiclesComponent {
     this.saveToLocalStorage();
   }
 
-  editData = (data: Vehicle) => {
 
-  }
 
   saveToLocalStorage(): void {
     localStorage.setItem('vehicleData', JSON.stringify(this.vehicles));

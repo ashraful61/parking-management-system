@@ -1,1 +1,31 @@
-<p>dashboard works!</p>
+<h1 class="dashboard-title">Dashboard</h1>
+
+<div class="dashboard-container">
+    <!-- Total Cars Parked -->
+    <div class="card bg-primary text-white">
+        <h3 class="text-white"><b>Total Cars Parked</b></h3>
+        <p>{{ parkingCars.length }}</p>
+    </div>
+
+    <!-- Total Empty Slots -->
+    <div class="card bg-success text-white">
+        <h3>Total Empty Slots</h3>
+        <p>{{ totalEmptySlots }}</p>
+    </div>
+
+    <!-- Vehicle Type Info -->
+    <div class="card bg-info text-white">
+        <h3 class="text-white"><b>Vehicle Types</b></h3>
+        @for (vt of vehicleTypeInfo; track vt.vehicleType) {
+        <p>{{ vt.vehicleType }}: <strong>{{ vt.numbeOfVehicle }}</strong></p>
+        }
+    </div>
+
+    <!-- Vehicles Parked for More Than Two Hours -->
+    <div class="card bg-warning text-dark">
+        <h3 class="text-white"><b>Vehicles Parked for More Than 2 Hours</b></h3>
+        @for (vehicle of vehiclesParkedMoreThan2Hours; track vehicle.licenseNumber) {
+        <p>{{ vehicle.licenseNumber }} - {{ vehicle.vehicleType }} - {{ vehicle.ownerName }}</p>
+        }
+    </div>
+</div>

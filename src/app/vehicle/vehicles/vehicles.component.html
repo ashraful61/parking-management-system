@@ -33,7 +33,7 @@
       <td>{{ vehicle.parkingCharge }}</td>
       <td>{{ vehicle.address }}</td>
       <td>
-        <a (click)="editData(vehicle)">Edit</a>
+        <a [routerLink]="['/vehicles/add-vehicle/'+vehicle.licenseNumber]">Edit</a>
         <nz-divider nzType="vertical"></nz-divider>
         <a (click)="deleteData(vehicle)">Delete</a>
       </td>
