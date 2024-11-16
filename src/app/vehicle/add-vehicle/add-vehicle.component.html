@@ -1,1 +1,115 @@
-<p>add-vehicle works!</p>
+<div class="form-container">
+  <form [formGroup]="vehicleForm" (ngSubmit)="submitForm()">
+
+    <div nz-row nzGutter="16">
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="licenseNumber" nzRequired>License Number</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please enter a valid license number!">
+            <input nz-input formControlName="licenseNumber" id="licenseNumber" placeholder="Enter License Number" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="vehicleType" nzRequired>Vehicle Type</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please select a vehicle type!">
+            <nz-select formControlName="vehicleType" id="vehicleType" placeholder="Select Vehicle Type">
+              <nz-option nzValue="Micro-bus" nzLabel="Micro-bus"></nz-option>
+              <nz-option nzValue="Car" nzLabel="Car"></nz-option>
+              <nz-option nzValue="Truck" nzLabel="Truck"></nz-option>
+              <nz-option nzValue="Bike" nzLabel="Bike"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="ownerName" nzRequired>Owner Name</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please enter the owner's name!">
+            <input nz-input formControlName="ownerName" id="ownerName" placeholder="Enter Owner Name" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="ownerPhone" nzRequired>Owner Phone</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please enter a valid phone number!">
+            <input nz-input formControlName="ownerPhone" id="ownerPhone" placeholder="Enter Phone Number" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="status" nzRequired>Status</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please select a status!">
+            <nz-select formControlName="status" id="status" placeholder="Select Status">
+              <nz-option nzValue="In" nzLabel="In"></nz-option>
+              <nz-option nzValue="Out" nzLabel="Out"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="entryTime" nzRequired>Entry Date & Time</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please select entry date and time!">
+            <nz-date-picker [nzShowTime]="{ nzDefaultOpenValue: timeDefaultValue }"  nzFormat="yyyy-MM-dd HH:mm:ss" class="w-full" formControlName="entryTime" id="entryTime"></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="exitTime">Exit Date & Time</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please select exit date and time!">
+            <nz-date-picker [nzShowTime]="{ nzDefaultOpenValue: timeDefaultValue }" nzFormat="yyyy-MM-dd HH:mm:ss"f class="w-full" formControlName="exitTime" id="exitTime"></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="parkingCharge">Parking Charge</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <input nz-input formControlName="parkingCharge" id="parkingCharge" type="number"
+              placeholder="Enter Parking Charge" />
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+
+      <div nz-col [nzXs]="{ span: 24}" [nzSm]="{span: 24}" [nzMd]="12" [nzLg]="{ span: 12}" [nzXl]="{span: 6}">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="24" nzFor="address" nzRequired>Owner Address</nz-form-label>
+          <nz-form-control [nzSpan]="24" nzErrorTip="Please enter the address!">
+            <textarea nz-input formControlName="address" id="address" rows="2" placeholder="Enter Address"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+
+    <div nz-row nzJustify="center">
+      <div nz-col>
+        <nz-form-item>
+          <nz-form-control>
+            <button nz-button nzType="primary" [disabled]="vehicleForm.invalid">Submit</button>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </form>
+
+  <div class="saved-data">
+    <h3>Saved Data:</h3>
+    <pre>{{ savedData | json }}</pre>
+  </div>
+</div>

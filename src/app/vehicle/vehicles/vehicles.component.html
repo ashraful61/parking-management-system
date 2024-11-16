@@ -1,1 +1,44 @@
-<p>vehicles works!</p>
+<div nz-row nzJustify="end" class="mb-30">
+  <div nz-col>
+    <button nz-button nzType="primary" routerLink="add-vehicle">Add Vehicle</button>
+  </div>
+</div>
+
+<nz-table #basicTable [nzBordered]="true" [nzData]="vehicles" [nzBordered]="true" [nzShowPagination]="false">
+  <thead>
+    <tr>
+      <th>License Number</th>
+      <th>Vehicle Type</th>
+      <th>Owner Name</th>
+      <th>Phone</th>
+      <th>Status</th>
+      <th>Entry Time</th>
+      <th>Exit Time</th>
+      <th>Parking Charge</th>
+      <th>Owner Address</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    @for( vehicle of basicTable.data; track vehicle.licenseNumber){
+    <tr>
+      <td>{{ vehicle.licenseNumber }}</td>
+      <td>{{ vehicle.vehicleType }}</td>
+      <td>{{ vehicle.ownerName }}</td>
+      <td>{{ vehicle.ownerPhone }}</td>
+      <td>{{ vehicle.status }}</td>
+      <td>{{ vehicle.entryTime | date: 'medium' }}</td>
+      <td>{{ vehicle.exitTime | date: 'medium' }}</td>
+      <td>{{ vehicle.parkingCharge }}</td>
+      <td>{{ vehicle.address }}</td>
+      <td>
+        <a (click)="editData(vehicle)">Edit</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a (click)="deleteData(vehicle)">Delete</a>
+      </td>
+    </tr>
+    }
+
+  </tbody>
+</nz-table>
