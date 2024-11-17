@@ -11,6 +11,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzRadioModule } from 'ng-zorro-antd/radio';
 
 const ngZorroModuleImport = [
   NzButtonModule,
@@ -24,6 +25,7 @@ const ngZorroModuleImport = [
   NzDividerModule,
   NzIconModule, 
   NzLayoutModule,
+  NzRadioModule,
 ]
 
 @NgModule({

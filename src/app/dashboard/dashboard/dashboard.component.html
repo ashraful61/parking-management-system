@@ -8,7 +8,7 @@
 
         <!-- Total Empty Slots -->
         <div class="card bg-success text-white">
-            <h3>Total Empty Slots</h3>
+            <h3 class="text-white">Total Empty Slots</h3>
             <p>{{ totalEmptySlots }}</p>
         </div>
 
@@ -29,10 +29,25 @@
         </div>
     </div>
 
-    <div class="chart-container mt-20">
+    <div class="chart-container mt-30">
         <h2>Vehicles Currently Parked</h2>
         <ngx-charts-pie-chart [view]="[width, 600]" [results]="vehicleTypeInfo" [legend]="true" [labels]="true"
             [doughnut]="false" [explodeSlices]="false" [gradient]="true">
         </ngx-charts-pie-chart>
+    </div>
+    <div class="chart-container mt-30">
+        <h2>Line chart data</h2>
+        <div class="mb-20">
+            <nz-radio-group [(ngModel)]="radioValue" nzButtonStyle="solid" (ngModelChange)="onChanngeLineChart($event)">
+                <label nz-radio-button nzValue="Today">Today</label>
+                <label nz-radio-button nzValue="Weekly">Weekly</label>
+                <label nz-radio-button nzValue="Monthly">Monthly</label>
+            </nz-radio-group>
+        </div>
+        <ngx-charts-line-chart [view]="[width, 500]" [results]="lineChartData" [xAxis]="true" [yAxis]="true"
+            [legend]="true" [showXAxisLabel]="true" [showYAxisLabel]="true" [xAxisLabel]="'Date'"
+            [yAxisLabel]="'Number of Cars Parked'" [autoScale]="true">
+        </ngx-charts-line-chart>
+
     </div>
 </nz-content>
