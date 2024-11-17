@@ -2,5 +2,16 @@
     margin-right: 16px;
 }
 .header {
-    background-color: aquamarine;
+    background-color: #1890ff;
 }
+
+.header a {
+    color:#ffffff;
+}
+
+.active {
+    font-weight: bold;
+    color: red;
+    border-bottom: 2px solid #ffffff;
+  }
+  

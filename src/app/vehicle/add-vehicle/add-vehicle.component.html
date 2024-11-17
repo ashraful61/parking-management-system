@@ -1,3 +1,10 @@
+<div nz-row class="mb-30">
+  <div nz-col>
+    <button nz-button routerLink="/vehicles">
+      Back To List</button>
+  </div>
+</div>
+
 <div class="form-container">
   <form [formGroup]="vehicleForm" (ngSubmit)="submitForm()">
 
@@ -61,7 +68,8 @@
         <nz-form-item>
           <nz-form-label [nzSpan]="24" nzFor="entryTime" nzRequired>Entry Date & Time</nz-form-label>
           <nz-form-control [nzSpan]="24" nzErrorTip="Please select entry date and time!">
-            <nz-date-picker [nzShowTime]="{ nzDefaultOpenValue: timeDefaultValue }"  nzFormat="yyyy-MM-dd HH:mm:ss" class="w-full" formControlName="entryTime" id="entryTime"></nz-date-picker>
+            <nz-date-picker [nzShowTime]="{ nzDefaultOpenValue: timeDefaultValue }" nzFormat="yyyy-MM-dd HH:mm:ss"
+              class="w-full" formControlName="entryTime" id="entryTime"></nz-date-picker>
           </nz-form-control>
         </nz-form-item>
       </div>
@@ -71,7 +79,8 @@
         <nz-form-item>
           <nz-form-label [nzSpan]="24" nzFor="exitTime">Exit Date & Time</nz-form-label>
           <nz-form-control [nzSpan]="24" nzErrorTip="Please select exit date and time!">
-            <nz-date-picker [nzShowTime]="{ nzDefaultOpenValue: timeDefaultValue }" nzFormat="yyyy-MM-dd HH:mm:ss"f class="w-full" formControlName="exitTime" id="exitTime"></nz-date-picker>
+            <nz-date-picker [nzShowTime]="{ nzDefaultOpenValue: timeDefaultValue }" nzFormat="yyyy-MM-dd HH:mm:ss" f
+              class="w-full" formControlName="exitTime" id="exitTime"></nz-date-picker>
           </nz-form-control>
         </nz-form-item>
       </div>

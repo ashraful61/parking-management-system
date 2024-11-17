@@ -1,6 +1,6 @@
 <header class="padding-40 header">
-  <a routerLink="/" class="mr-16">Dashboard</a>
-  <a routerLink="/vehicles">Vehicles</a>
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mr-16">Dashboard</a>
+  <a routerLink="/vehicles" routerLinkActive="active" [routerLinkActiveOptions]="{exact: false}">Vehicles</a>
 </header>
 
 <div class="padding-40">

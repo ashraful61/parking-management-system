@@ -3,12 +3,12 @@ import { CommonModule, JsonPipe } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SharedModule } from '../../shared/shared.module';
 import { Vehicle } from '../../Interface/vehicle.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-add-vehicle',
   standalone: true,
-  imports: [CommonModule, SharedModule, JsonPipe],
+  imports: [CommonModule, SharedModule, JsonPipe,RouterLink],
   templateUrl: './add-vehicle.component.html',
   styleUrls: ['./add-vehicle.component.css'],
 })

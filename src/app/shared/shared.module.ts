@@ -9,6 +9,8 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzDatePickerModule } from 'ng-zorro-antd/date-picker';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 const ngZorroModuleImport = [
   NzButtonModule,
@@ -20,6 +22,8 @@ const ngZorroModuleImport = [
   NzDatePickerModule,
   NzTableModule,
   NzDividerModule,
+  NzIconModule, 
+  NzLayoutModule,
 ]
 
 @NgModule({
