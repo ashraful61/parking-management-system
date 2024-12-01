@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.khaasfood",
       "sha256_cert_fingerprints": [
-        "25:C7:CD:83:5A:BF:11:2E:6D:AC:8C:9A:9C:30:84:DC:9D:B9:FA:D5:1D:3B:D9:F0:92:50:7A:4D:D2:C1:AA:1F"
+        "25:C7:CD:83:5A:BF:11:2E:6D:AC:8C:9A:9C:30:84:DC:9D:B9:FA:D5:1D:3B:D9:F0:92:50:7A:4D:D2:C1:AA:1F",
+        "0D:B6:2B:18:08:03:C4:A7:7B:A1:61:DB:11:9E:67:59:CC:19:92:B6:9E:E8:E2:88:29:E0:69:F1:B4:42:39:77"
       ]
     }
   }
