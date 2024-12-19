@@ -39,6 +39,9 @@ export class AddVehicleComponent {
     if (this.licenseNumber) {
       this.setFormData(this.licenseNumber);
     }
+
+    debugger
+
   }
 
   initForm(): void {
@@ -78,7 +81,7 @@ export class AddVehicleComponent {
       // Object.keys(this.vehicleForm.controls).forEach(field => {
       //   if (field !== 'status') {
       //     // this.vehicleForm.get(field)?. ();
-      //   }  
+      //   }
       // });
     }
   }
